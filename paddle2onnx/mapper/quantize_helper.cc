@@ -139,8 +139,8 @@ void QuantizeModelProcessor::ProcessQuantizeModel(
     // 6. use topo sort in nodes
     QuantizeInfoBroadcast();
     RemoveAllQuantizeOps();
-    MergeConvAdd();
-    MergeConvBN();
+    // MergeConvAdd();
+    // MergeConvBN();
     AddQDQForORT();
     SortNodes();
   } else if (deploy_backend == "tensorrt") {
